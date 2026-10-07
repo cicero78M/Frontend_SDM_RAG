@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDM RAG — Asisten Knowledge Base</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div class="brand"><span class="mark">✦</span><div><p class="eyebrow">AS SDM KAPOLRI</p><h1>Asisten Knowledge Base</h1></div></div><span class="status"><i></i><span id="status">Memuat knowledge base</span></span></header>
+    <section class="hero"><p class="eyebrow">RETRIEVAL-AUGMENTED GENERATION</p><h2>Tanyakan ketentuan SDM<br><em>secara langsung.</em></h2><p class="intro">Temukan informasi dari dokumen resmi secara cepat, dengan sumber yang transparan dan jawaban yang tetap terikat pada knowledge base.</p><div class="chips"><button data-question="Bagaimana ketentuan penilaian kinerja anggota Polri?">Penilaian kinerja anggota</button><button data-question="Apa persyaratan pangkat untuk mengikuti seleksi Sekolah Bintara Polisi dari Tamtama ke Bintara T.A. 2027 bagi lulusan SMA?">Persyaratan seleksi SBP</button><button data-question="Apa saja persyaratan mengikuti SBP T.A. 2027?">Persyaratan SBP</button></div></section>
+    <section id="messages" class="messages"><div class="empty"><span>◌</span><p>Belum ada pertanyaan</p><small>Mulai dengan memilih contoh pertanyaan di atas atau tulis pertanyaan Anda.</small></div></section>
+    <form id="ask-form" class="composer"><textarea id="question" rows="1" placeholder="Tulis pertanyaan tentang ketentuan SDM..." required></textarea><button aria-label="Kirim pertanyaan">Kirim <span>↗</span></button></form>
+    <footer><span>SUMBER TERKURASI</span><span>•</span><span>JAWABAN BERBASIS DOKUMEN</span><span>•</span><span>PROTOTYPE TALENTA SCOUTING 2026</span></footer>
+  </main><script src="/app.js"></script>
+</body></html>
