@@ -35,3 +35,15 @@ Pastikan backend berjalan pada port 3000, atau sesuaikan URL API di `src/app.js`
 2. Tunjukkan jawaban, confidence, dan sumber chunk.
 3. Ajukan pertanyaan di luar knowledge base untuk menunjukkan respons aman.
 4. Jelaskan bahwa LLM menggunakan LiteLLM dengan Gemini melalui backend.
+# Frontend SDM RAG
+
+Frontend statis untuk RAG Asisten SDM Polri. UI mengirim pertanyaan ke backend Node.js melalui `window.SDM_API_URL` atau default `http://localhost:3000`, lalu menampilkan jawaban, confidence/provider, dan sitasi dokumen-halaman-chunk.
+
+## Menjalankan
+
+```bash
+npm install
+npm start
+```
+
+Backend harus aktif dan telah dikonfigurasi menggunakan LiteLLM. Frontend tidak menyimpan API key dan tidak memanggil provider model secara langsung.
