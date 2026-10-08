@@ -1,4 +1,4 @@
-const API = window.SDM_API_URL || 'http://localhost:3001';
+const API = window.SDM_API_URL || '/rag';
 const form = document.querySelector('#ask-form');
 const input = document.querySelector('#question');
 const messages = document.querySelector('#messages');
