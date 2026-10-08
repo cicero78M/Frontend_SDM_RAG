@@ -17,10 +17,15 @@ document.querySelectorAll('[data-question]').forEach((button) => button.addEvent
   input.focus();
 }));
 
+function renderAnswer(text) {
+  const escaped = String(text).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+  return escaped.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+}
+
 function addMessage(text, role, sources = [], confidence = '', provider = '') {
   document.querySelector('.empty')?.remove();
   const node = document.createElement('div'); node.className = `message ${role}`;
-  const safe = document.createElement('div'); safe.className = 'bubble'; safe.textContent = text;
+  const safe = document.createElement('div'); safe.className = 'bubble'; safe.innerHTML = renderAnswer(text);
   const avatar = document.createElement('div'); avatar.className = 'avatar'; avatar.textContent = role === 'user' ? 'AN' : 'AI';
   const wrap = document.createElement('div'); wrap.append(safe);
   if (confidence || provider) { const meta = document.createElement('div'); meta.className = 'meta'; meta.textContent = `${confidence ? `Relevansi: ${confidence}` : ''}${provider ? ` · ${provider}` : ''}`; wrap.append(meta); }
