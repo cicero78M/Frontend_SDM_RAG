@@ -19,7 +19,7 @@ Struktur utama:
 - `src/styles.css` — tampilan responsif
 - `src/app.js` — state chat dan komunikasi API
 
-Frontend memanggil backend pada `http://localhost:3000` secara default. Untuk deployment, set `window.SDM_API_URL` sebelum `app.js` dijalankan atau ubah konstanta API di `src/app.js`.
+Frontend memanggil backend RAG pada `http://localhost:3001` secara default. Untuk deployment, set `window.SDM_API_URL` sebelum `app.js` dijalankan atau ubah konstanta API di `src/app.js`.
 
 ## Jalankan
 
@@ -27,17 +27,17 @@ Frontend memanggil backend pada `http://localhost:3000` secara default. Untuk de
 npx serve src -l 4173
 ```
 
-Pastikan backend berjalan pada port 3000, atau sesuaikan URL API di `src/app.js`.
+Pastikan backend RAG berjalan pada port 3001, atau sesuaikan URL API di `src/app.js`.
 
 ## Demo yang disarankan
 
 1. Ajukan pertanyaan tentang Faktor Generik atau SIPK dari PERPOL.
 2. Tunjukkan jawaban, confidence, dan sumber chunk.
 3. Ajukan pertanyaan di luar knowledge base untuk menunjukkan respons aman.
-4. Jelaskan bahwa LLM menggunakan LiteLLM dengan Gemini melalui backend.
+4. Jelaskan bahwa LLM menggunakan LiteLLM dengan GitHub Copilot melalui backend.
 # Frontend SDM RAG
 
-Frontend statis untuk RAG Asisten SDM Polri. UI mengirim pertanyaan ke backend Node.js melalui `window.SDM_API_URL` atau default `http://localhost:3000`, lalu menampilkan jawaban, confidence/provider, dan sitasi dokumen-halaman-chunk.
+Frontend statis untuk RAG Asisten SDM Polri. UI mengirim pertanyaan ke backend Node.js melalui `window.SDM_API_URL` atau default `http://localhost:3001`, lalu menampilkan jawaban, confidence/provider, dan sitasi dokumen-halaman-chunk.
 
 ## Menjalankan
 
